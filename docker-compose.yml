@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  hydra-api:
+    build:
+      context: .
+    container_name: hydra-api
+    ports:
+      - "${PORT}:${PORT}" # Mapea directamente el puerto de tu .env (ej. 8081:8081) hacia afuera
+    environment:
+      - SPRING_APPLICATION_NAME=${SPRING_APPLICATION_NAME}
+      - SPRING_DATASOURCE_URL=${SPRING_DATASOURCE_URL}
+      - SPRING_DATASOURCE_USERNAME=${SPRING_DATASOURCE_USERNAME}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - SPRING_PROFILES_ACTIVE=${SPRING_PROFILES_ACTIVE}
+      - JWT_SECRET=${JWT_SECRET}
+      - SUPABASE_S3_SECRET_KEY=${SUPABASE_S3_SECRET_KEY}
+    restart: unless-stopped
