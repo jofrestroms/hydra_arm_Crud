@@ -15,7 +15,7 @@ RUN apk add --no-cache curl
 # Copiar JAR desde la etapa anterior
 COPY --from=build /app/target/*.jar app.jar
 
-# Puerto 8081
+# Puerto 8080
 ENV PORT=8080
 EXPOSE 8080
 
@@ -23,4 +23,4 @@ EXPOSE 8080
 HEALTHCHECK --interval=30s --timeout=3s \
   CMD curl -f http://localhost:8080/actuator/health || exit 1
 
-ENTRYPOINT ["java", "-Dserver.port=8081", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-Dserver.port=8080", "-jar", "app.jar"]
