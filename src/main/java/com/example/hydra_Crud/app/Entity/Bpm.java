@@ -21,9 +21,6 @@ public class Bpm {
 
     // Getters y Setters
 
-    public Long getIdBpm() { return idBpm; }
-    public void setIdBpm(Long idBpm) { this.idBpm = idBpm; }
-
     public String getRunP() { return runP; }
     public void setRunP(String runP) { this.runP = runP; }
 
