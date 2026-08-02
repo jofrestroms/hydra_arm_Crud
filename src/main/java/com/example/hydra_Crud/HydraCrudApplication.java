@@ -7,8 +7,8 @@ import org.springframework.boot.persistence.autoconfigure.EntityScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-@EntityScan("com.Example.hydra_Crud.app.Entity")
-@EnableJpaRepositories("com.Example.hydra_Crud.app.Repository")
+@EntityScan("com.example.hydra_Crud.app.Entity")
+@EnableJpaRepositories("com.example.hydra_Crud.app.Repository")
 public class HydraCrudApplication {
 
 	public static void main(String[] args) {
